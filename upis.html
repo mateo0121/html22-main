@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upis | NK Sloga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+
+
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="../slike/grb.jpg" alt="Grb NK Sloga" class="h-9 w-9 object-contain">
+                <span class="text-2xl font-extrabold text-emerald-700 tracking-wide">NK SLOGA</span>
+            </a>
+            <nav class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="hover:text-emerald-700 transition">Naslovnica</a>
+                <a href="velicinaTima.html" class="hover:text-emerald-700 transition">Veličina tima</a>
+                <a href="upis.html" class="text-emerald-700 font-bold border-b-2 border-emerald-600 pb-1">Upis</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <nav class="md:hidden bg-white border-b border-gray-200 shadow-sm">
+        <div class="flex justify-around py-3 text-sm font-semibold text-gray-600">
+            <a href="index.html" class="hover:text-emerald-700">Naslovnica</a>
+            <a href="velicinaTima.html" class="hover:text-emerald-700">Veličina tima</a>
+            <a href="upis.html" class="text-emerald-700 font-bold">Upis</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-2xl mx-auto px-4 py-12 w-full">
+
+        <div class="text-center mb-8">
+            <img src="../slike/grb.jpg" alt="Grb NK Sloga" class="h-16 w-16 mx-auto mb-3 object-contain">
+            <h1 class="text-3xl font-extrabold text-gray-900">Prijava za poziciju</h1>
+            <p class="text-gray-600 text-sm mt-1">Ispunite obrazac i postanite dio naše sportske obitelji.</p>
+        </div>
+
+
+        <form class="bg-white p-6 md:p-8 rounded-2xl border border-gray-200 shadow-sm flex flex-col gap-5">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex flex-col gap-1 w-full">
+                    <label for="name" class="text-sm font-medium text-gray-700">Ime i prezime</label>
+                    <input type="text" id="name" name="name" placeholder="npr. Ivan Horvat"
+                        class="border border-gray-300 rounded-xl px-4 py-2.5 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 focus:outline-none transition">
+                </div>
+
+                <div class="flex flex-col gap-1 w-full">
+                    <label for="email" class="text-sm font-medium text-gray-700">E-mail adresa</label>
+                    <input type="email" id="email" name="email" placeholder="ivan@primjer.com"
+                        class="border border-gray-300 rounded-xl px-4 py-2.5 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 focus:outline-none transition">
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-1">
+                <label for="position" class="text-sm font-medium text-gray-700">Za koju poziciju se prijavljujete?</label>
+                <select id="position" name="position"
+                    class="border border-gray-300 rounded-xl px-4 py-2.5 bg-white focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 focus:outline-none transition">
+                    <option value="">Odaberite poziciju...</option>
+                    <option value="trener">Glavni trener</option>
+                    <option value="pomocni">Pomoćni trener</option>
+                    <option value="golmani">Trener vratara</option>
+                    <option value="igrac">Igrač</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-1">
+                <label for="experience" class="text-sm font-medium text-gray-700">Imate li iskustva u ovom području?</label>
+                <textarea id="experience" name="experience" rows="3" placeholder="Napišite ukratko o svom dosadašnjem iskustvu ili klubu u kojem ste trenirali..."
+                    class="border border-gray-300 rounded-xl px-4 py-2.5 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-100 focus:outline-none transition"></textarea>
+            </div>
+
+            <button type="submit"
+                class="bg-emerald-600 text-white font-bold px-8 py-3.5 rounded-xl shadow hover:bg-emerald-700 hover:shadow-md transition active:scale-[0.99]">
+                Pošalji prijavu
+            </button>
+        </form>
+    </main>
+
+
+    <footer class="bg-gray-900 text-gray-300 mt-auto border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <div class="text-center md:text-left">
+                <p class="font-bold text-white mb-1">Nogometni Klub Sloga Koprivnica</p>
+                <p class="text-gray-400">Ulica Sloga 1, Koprivnica</p>
+            </div>
+            <div class="text-center md:text-right">
+                <p class="text-gray-400">Kontakt telefon: <span class="text-white font-medium">035/123-456</span></p>
+                <p class="text-xs text-gray-500 mt-1">&copy; NK Sloga. Sva prava pridržana.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
